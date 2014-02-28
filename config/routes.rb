@@ -1,5 +1,14 @@
 Bigreen::Application.routes.draw do
+  get "pages/page"
   resources :products
+
+
+
+  get 'contact' => "pages#page", page: "contact"
+  get 'legal' => "pages#page", page: "legal"
+
+  root 'pages#page', page: "home"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

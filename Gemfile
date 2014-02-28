@@ -52,8 +52,6 @@ gem 'rails-i18n'
 gem 'simple_form'
 gem 'country_select'
 
-# Bootstrap SaSS
-gem 'bootstrap-sass'
 
 group :test, :development do
 	# RSpec
