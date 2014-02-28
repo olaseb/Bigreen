@@ -5,7 +5,6 @@ describe "products/show" do
     @product = assign(:product, stub_model(Product,
       :name => "Name",
       :description => "Description",
-      :text => "Text",
       :price => 1
     ))
   end
@@ -15,7 +14,6 @@ describe "products/show" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Name/)
     rendered.should match(/Description/)
-    rendered.should match(/Text/)
     rendered.should match(/1/)
   end
 end

@@ -4,8 +4,7 @@ describe "products/new" do
   before(:each) do
     assign(:product, stub_model(Product,
       :name => "MyString",
-      :description => "MyString",
-      :text => "MyString",
+      :description => "MyText",
       :price => 1
     ).as_new_record)
   end
@@ -17,7 +16,6 @@ describe "products/new" do
     assert_select "form[action=?][method=?]", products_path, "post" do
       assert_select "input#product_name[name=?]", "product[name]"
       assert_select "input#product_description[name=?]", "product[description]"
-      assert_select "input#product_text[name=?]", "product[text]"
       assert_select "input#product_price[name=?]", "product[price]"
     end
   end
